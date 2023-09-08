@@ -1,4 +1,4 @@
-package src.ReferenceRevision.Taxe;
+package ReferenceRevision.Taxe;
 
 public class TaxeDouble {
     private String nom;

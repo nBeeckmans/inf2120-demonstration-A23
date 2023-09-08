@@ -1,13 +1,9 @@
-package ReferenceRevision.Couleur;
+package Extra.FindOut;
 
-/**
- * Represente une <code>couleur</code> composee de couleurs primaires <code>rouge</code>, <code>vert</code> et
- * <code>bleu</code>.
- */
 public class Couleur {
-    private int rouge;
-    private int vert;
-    private int bleu;
+    private Integer rouge;
+    private Integer vert;
+    private Integer bleu;
 
     private final int VALEUR_MAX= 255;
     private final int VALEUR_MIN= 0;
@@ -21,19 +17,10 @@ public class Couleur {
         return rouge;
     }
 
-     public void setRouge(int rouge) {
+    public void setRouge(int rouge) {
         if (rouge > VALEUR_MAX || rouge < VALEUR_MIN)
             throw new RuntimeException();
         this.rouge = rouge;
-    }
-
-    @Override
-    public String toString() {
-        return "Couleur{" +
-                "rouge=" + rouge +
-                ", vert=" + vert +
-                ", bleu=" + bleu +
-                '}';
     }
 
     public int getVert() {
@@ -57,16 +44,20 @@ public class Couleur {
     }
 
     public void blanchir(){
-        //rouge = (rouge + VALEUR_MAX )/2;
-        //vert  = (vert + VALEUR_MAX )/2;
-        //bleu = (bleu + VALEUR_MAX )/2;
-        rouge = moyenne(rouge, VALEUR_MAX);
-        vert = moyenne(vert, VALEUR_MAX);
-        bleu = moyenne(bleu, VALEUR_MAX);
+        blanchirCouleurPrimaire(rouge);
     }
 
-    private int moyenne(int valeur1, int valeur2) {
-        return (valeur1 + valeur2) / 2;
+    private void blanchirCouleurPrimaire(Integer couleur) {
+        couleur =  (couleur + 255) / 2;
+    }
+
+    @Override
+    public String toString() {
+        return "ReferenceRevision.Couleur.Couleur{" +
+                "rouge=" + rouge +
+                ", vert=" + vert +
+                ", bleu=" + bleu +
+                '}';
     }
 
 }

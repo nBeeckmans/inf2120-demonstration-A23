@@ -1,4 +1,4 @@
-package src.ReferenceRevision.Taxe;
+package ReferenceRevision.Taxe;
 public class NonTaxable {
     private String nom;
     private double prix;
