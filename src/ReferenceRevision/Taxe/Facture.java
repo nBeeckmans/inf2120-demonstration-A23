@@ -1,15 +1,14 @@
-package ReferenceRevision.Taxe;
-
+package src.ReferenceRevision.Taxe;
 public class Facture {
 
-    static final String MESSAGE_ERREUR =
+    private static final String MESSAGE_ERREUR =
             "impossible d'ajouter un element supplementaire a ";
-    static final int NOMBRE_MAXIMUM_ELEMENTS = 10;
-    NonTaxable[] produitsNonTaxables = new NonTaxable[10];
-    TaxeSimple[] produitsTaxablesSimple = new TaxeSimple[10];
-    int compteurElementTaxablesSimple = 0;
-    TaxeDouble[] produitsTaxablesDouble = new TaxeDouble[10];
-    int compteurElementTaxablesDouble = 0;
+    private static final int NOMBRE_MAXIMUM_ELEMENTS = 10;
+    private NonTaxable[] produitsNonTaxables = new NonTaxable[10];
+    private TaxeSimple[] produitsTaxablesSimple = new TaxeSimple[10];
+    private int compteurElementTaxablesSimple = 0;
+    private TaxeDouble[] produitsTaxablesDouble = new TaxeDouble[10];
+    private int compteurElementTaxablesDouble = 0;
 
     //ajouterProduit(NonTaxable produit);
     //ajouterProduit(TaxeSimple produit);
