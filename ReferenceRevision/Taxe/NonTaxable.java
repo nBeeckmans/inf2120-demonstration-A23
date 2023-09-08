@@ -1,7 +1,5 @@
 package ReferenceRevision.Taxe;
 
-import java.text.DecimalFormat;
-
 public class NonTaxable {
     private String nom;
     private double prix;
