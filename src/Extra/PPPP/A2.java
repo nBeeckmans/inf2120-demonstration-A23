@@ -1,4 +1,4 @@
-package Extra.PPP;
+package Extra.PPPP;
 
 public class A2 extends A{
     private void methode() {

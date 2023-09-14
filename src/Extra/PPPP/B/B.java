@@ -1,6 +1,6 @@
-package Extra.PPP.B;
+package Extra.PPPP.B;
 
-import Extra.PPP.A;
+import Extra.PPPP.A;
 
 public class B extends A {
     private void methode () {
