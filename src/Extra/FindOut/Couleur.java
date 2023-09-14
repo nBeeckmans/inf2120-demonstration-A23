@@ -38,7 +38,6 @@ public class Couleur {
     }
 
     public void setBleu(int bleu) {
-
         if (bleu > VALEUR_MAX || bleu < VALEUR_MIN)
             throw new RuntimeException();
         this.bleu = bleu;
@@ -49,8 +48,6 @@ public class Couleur {
     }
 
     private void blanchirCouleurPrimaire(Integer couleur) {
-        // Meme si couleur est un pointeur, il n'est pas possible de
-        // modifier la valeur de l'objet !
         couleur =  (couleur + 255) / 2;
     }
 

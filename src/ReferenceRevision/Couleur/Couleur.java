@@ -18,13 +18,7 @@ public class Couleur {
     }
 
     public int getRouge() {
-        return rouge;
-    }
-
-     public void setRouge(int rouge) {
-        if (rouge > VALEUR_MAX || rouge < VALEUR_MIN)
-            throw new RuntimeException();
-        this.rouge = rouge;
+        return this.rouge;
     }
 
     @Override
@@ -34,6 +28,12 @@ public class Couleur {
                 ", vert=" + vert +
                 ", bleu=" + bleu +
                 '}';
+    }
+
+    public void setRouge(int rouge) {
+        if (rouge > VALEUR_MAX || rouge < VALEUR_MIN)
+            throw new RuntimeException();
+        this.rouge = rouge;
     }
 
     public int getVert() {
