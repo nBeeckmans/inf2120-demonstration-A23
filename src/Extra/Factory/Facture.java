@@ -1,10 +1,11 @@
-package Heritage.Taxe;
+package Extra.Factory;
 
 public class Facture {
 
     private static final String MESSAGE_ERREUR =
             "impossible d'ajouter un element supplementaire a ";
     private static final int NOMBRE_MAXIMUM_ELEMENTS = 10;
+
     private Produit[] produits = new Produit[30];
     int produitEffectifs = 0;
 
@@ -40,10 +41,6 @@ public class Facture {
             System.err.println(MESSAGE_ERREUR + TaxeSimple.class.getName());
         }
     }
-    /**
-     * Permet d'ajouter un <code>Produit</code> aux produits de la <code>Facture</code>.
-     * @param produit a ajouter.
-     */
     public void ajouterProduit(Produit produit) {
         if ( produitEffectifs < NOMBRE_MAXIMUM_ELEMENTS ) {
             produits[produitEffectifs] = produit;
@@ -55,6 +52,7 @@ public class Facture {
 
     public double prixTotal() {
         double prixTotal = 0.0;
+        //for "optimise"
         for (int i = 0; i < produitEffectifs; i ++){
                 prixTotal += produits[i].prix();
         }

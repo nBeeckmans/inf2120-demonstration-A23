@@ -8,4 +8,12 @@ public class A {
     public int c;
     int d;
     static int d2;
+
+    protected int getA() {
+        return a;
+    }
+
+    protected void setA(int a) {
+        this.a = a;
+    }
 }
