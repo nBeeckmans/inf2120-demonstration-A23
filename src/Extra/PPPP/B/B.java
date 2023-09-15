@@ -4,7 +4,7 @@ import Extra.PPPP.A;
 
 public class B extends A {
     private void methode () {
-        //d = super.b + super.c;
+        int x = super.b2;
         int d = super.b + super.c;
     }
 }

@@ -5,7 +5,7 @@ import Extra.PPPP.B.E;
 
 public class Main {
     public static void main(String[] args) {
-        A a = new A();
+        A a = new A3();
         B b = new B();
         D d = new D();
         E e = new E();
