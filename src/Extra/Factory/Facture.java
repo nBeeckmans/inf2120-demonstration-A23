@@ -4,7 +4,7 @@ public class Facture {
 
     private static final String MESSAGE_ERREUR =
             "impossible d'ajouter un element supplementaire a ";
-    private static final int NOMBRE_MAXIMUM_ELEMENTS = 10;
+    private static final int NOMBRE_MAXIMUM_ELEMENTS = 30;
 
     private Produit[] produits = new Produit[30];
     int produitEffectifs = 0;

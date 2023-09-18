@@ -3,7 +3,7 @@ package ReferenceRevision.Taxe;
 public class TaxeDouble {
     private String nom;
     private double  prix;
-    private static double TAXE = 1.09975;
+    private final static double TAXE = 1.09975;
 
     public TaxeDouble(String nom, double prix) {
         this.nom = nom;

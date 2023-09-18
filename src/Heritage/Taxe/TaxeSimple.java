@@ -1,6 +1,6 @@
 package Heritage.Taxe;
 public class TaxeSimple extends Produit{
-    private static double TAXE = 1.05;
+    private static final double TAXE = 1.05;
     public TaxeSimple(String nom, double prix) {
         super(nom, prix);
     }
