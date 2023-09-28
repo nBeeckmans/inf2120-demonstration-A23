@@ -20,7 +20,7 @@ public class Principale {
             elementRegarde = a_tableau[indice];
 
             if (elementRegarde != null)
-                pasTrouve = !elementRegarde.equals(a_element);
+                pasTrouve = !(elementRegarde.equals(a_element));
 
             indice ++;
         } while(pasTrouve && indice < a_tableau.length);

@@ -14,11 +14,12 @@ __code simplifie:__
 ```java
 public static void main(String[] args) {
         GameState gameState; 
-        Frame frame; 
+        Renderer renderer;
+        
         while(true) {
             PeutEtre<UserInput> userInput = regarderInput(); 
             gameState.modifier(userInput); 
-            frame.mettreAJour(gameState); 
+            renderer.mettreAJour(gameState); 
         }   
 }
 
@@ -36,6 +37,5 @@ On peut reutiliser les methodes de presence et absence dans des algorithmes !
 
 __Autre cas (que je connais)__:
 
-C et Rust (qui n'a pas de NULL non plus) n'ont pas d'exceptions comme en Java, ainsi un object ou une structure de donnee. 
-Avec un moyen de retourner l'absence d'objet est necessaire. 
+C et Rust (qui n'a pas de NULL non plus) n'ont pas d'exceptions comme en Java. Ainsi un objet ou une structure de donnee avec un moyen de signifer l'absence potentielle de retour est necessaire. 
 

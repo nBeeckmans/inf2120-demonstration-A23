@@ -35,12 +35,14 @@ class PrincipaleTest {
         ArrayList<Double> obtenu = tweens(1,1,1);
         assertEquals(attendu, obtenu);
     }
+
     @Test
     void tweens_0_1_5_PasCorrect() {
         ArrayList<Double> attendu = new ArrayList<>(Arrays.asList(0.0,0.2,0.4,0.6,0.8,1.0));
         ArrayList<Double> obtenu = tweens(0,1,5);
         assertEquals(attendu, obtenu);
     }
+
     @Test
     void tweens_0_1_5_Correct() {
         double[] attendu = {0.0,0.2,0.4,0.6,0.8,1.0};
