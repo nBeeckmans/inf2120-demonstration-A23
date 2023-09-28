@@ -36,6 +36,6 @@ On peut reutiliser les methodes de presence et absence dans des algorithmes !
 
 __Autre cas (que je connais)__:
 
-C et Rust (qui n'a pas de Null non plus) n'ont pas d'exceptions comme en Java, ainsi un object ou une structure de donnee. 
+C et Rust (qui n'a pas de NULL non plus) n'ont pas d'exceptions comme en Java, ainsi un object ou une structure de donnee. 
 Avec un moyen de retourner l'absence d'objet est necessaire. 
 

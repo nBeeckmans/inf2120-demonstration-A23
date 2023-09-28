@@ -8,13 +8,15 @@ public class Principale {
         System.out.println(tweens(0, 12, 0));
     }
     public static ArrayList<Double> tweens(double depart, double fin, int nbrInterval ){
-        ArrayList<Double> tableau = new ArrayList<>(nbrInterval + 1);
-        double ecart = (fin - depart) / nbrInterval;
-        tableau.add(depart);
+        int tailleTableau = nbrInterval + 1;
+        ArrayList<Double> tableau = new ArrayList<>(tailleTableau);
+        double ecart = nbrInterval != 0
+                ? (fin - depart) / nbrInterval
+                : 0;
 
-        while(depart < fin){
-            depart += ecart;
+        for (int i = 0; i < tailleTableau; i++){
             tableau.add(depart);
+            depart += ecart;
         }
         return tableau;
     }

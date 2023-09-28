@@ -3,6 +3,7 @@ package TypeGenerique.PeutEtre;
 import java.util.Optional;
 
 public class Principale {
+
     public static void main (String[] args) {
         Double[] tableauDouble = {1.0, 1.11, 1.23, 1.25};
         PeutEtre<Integer> elementTrouve = trouverElement(tableauDouble, 1.0);
@@ -24,9 +25,17 @@ public class Principale {
             indice ++;
         } while(pasTrouve && indice < a_tableau.length);
 
-        return indice < a_tableau.length
-                ? new QQChose<>(--indice)
-                : new Rien<>();
+        PeutEtre<Integer> valeurRetour;
+        if ( indice < a_tableau.length ) {
+
+            // Equivaut a :
+            // indice = indice -1;
+            // retour = new QQchose<>(indice);
+            valeurRetour = new QQChose<>(--indice);
+        } else {
+            valeurRetour = new Rien<>();
+        }
+        return valeurRetour;
     }
     public static <T> Optional<Integer> trouverElementOptional(T[] a_tableau, T a_element ) {
         int i = 0;
@@ -37,7 +46,7 @@ public class Principale {
             elementRegarde = a_tableau[i];
 
             if (elementRegarde != null){
-                pasTrouve = !elementRegarde.equals(a_element);
+                pasTrouve = !(elementRegarde.equals(a_element));
             }
 
             i ++;
