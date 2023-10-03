@@ -64,7 +64,7 @@ public class Principale {
                 : Optional.empty();
     }
 
-    public static <T extends Produit> Facture creerFacture(T...elements) {
+    public static <T extends Produit> Facture creerFacture(T...elements ) {
         Facture nouvelleFacture = new Facture();
         for(T element : elements) {
             nouvelleFacture.ajouterProduit(element);
