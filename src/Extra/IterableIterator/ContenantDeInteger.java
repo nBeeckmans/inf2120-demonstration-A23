@@ -24,7 +24,9 @@ public class ContenantDeInteger implements Iterable<Integer> {
     }
 
     public void add(Integer i) {
-        tableCirculaire [++compteurElement < tableCirculaire.length ? compteurElement : (compteurElement = 0)] = i;
+        tableCirculaire [++compteurElement < tableCirculaire.length
+                ? compteurElement
+                : (compteurElement = 0)] = i;
     }
 
 }
