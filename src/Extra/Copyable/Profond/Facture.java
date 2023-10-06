@@ -36,8 +36,7 @@ public class Facture implements Copyable<Facture>  {
     public Facture copier() {
         Produit[] produitsCopie = new Produit[NOMBRE_MAXIMUM_ELEMENTS];
         for (int i = 0; i < produitEffectifs; i ++) {
-            Produit produit = produits[i];
-            produitsCopie[i] = produit.copier();
+            produitsCopie[i] = produits[i].copier();
         }
         return new Facture( produitsCopie, produitEffectifs );
     }

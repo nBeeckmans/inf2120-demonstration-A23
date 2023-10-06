@@ -10,7 +10,8 @@ public class NDouble implements Nombre<NDouble>{
 
     @Override
     public NDouble add(NDouble x) {
-        return new NDouble(var + x.var);
+        double a = var + x.var;
+        return new NDouble(a);
     }
 
     @Override

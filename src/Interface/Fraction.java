@@ -1,7 +1,5 @@
 package Interface;
 
-import java.io.Closeable;
-
 public class Fraction implements Nombre<Fraction> {
     protected Double numerateur;
     protected Double denominateur;
@@ -16,7 +14,8 @@ public class Fraction implements Nombre<Fraction> {
 
     @Override
     public Fraction add(Fraction x) {
-        Double nouveauNumerateur = this.numerateur * x.denominateur + this.denominateur * x.numerateur;
+        Double nouveauNumerateur = this.numerateur * x.denominateur
+                + this.denominateur * x.numerateur;
         Double nouveauDenominateur = this.denominateur * x.denominateur ;
         return new Fraction(nouveauNumerateur, nouveauDenominateur);
     }
@@ -38,8 +37,8 @@ public class Fraction implements Nombre<Fraction> {
 
     @Override
     public Fraction div(Fraction x) {
-        Double nouveauNumerateur = this.numerateur * x.numerateur;
-        Double nouveauDenominateur = this.denominateur * x.denominateur;
+        Double nouveauNumerateur = this.numerateur * x.denominateur;
+        Double nouveauDenominateur = this.numerateur * x.denominateur;
         Fraction nouvelleFraction = null;
 
         try {
