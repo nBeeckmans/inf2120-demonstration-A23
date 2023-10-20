@@ -13,5 +13,9 @@ public class Principale {
         for (Integer i : c ) {
             System.out.println(i);
         }
+
+        while(c.iterator().hasNext()){
+            System.out.println(c.iterator().next());
+        }
     }
 }
