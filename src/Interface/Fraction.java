@@ -51,8 +51,8 @@ public class Fraction implements Nombre<Fraction> {
     @Override
     public String toString() {
         return "Fraction{" +
-                "Numerateur=" + numerateur +
-                ", Denominateur=" + denominateur +
+                "numerateur=" + numerateur +
+                ", denominateur=" + denominateur +
                 '}';
     }
 }

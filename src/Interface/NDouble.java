@@ -27,7 +27,7 @@ public class NDouble implements Nombre<NDouble>{
     @Override
     public NDouble div(NDouble x) {
         return x.var != 0
-                ? new NDouble(var / x.var)
+                ? new NDouble(this.var / x.var)
                 : new NDouble();
     }
 
