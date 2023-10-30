@@ -11,10 +11,10 @@ public class Principale {
 
     public static void main(String[] args) {
         Supplier<Integer> supplier = new MRand(BORNE_MAX);
-        //testGenerateur(supplier);
+        testGenerateur(supplier);
         //testFunction();
         //testConsummerFraction();
-        testPredicate(supplier);
+        //testPredicate(supplier);
    }
 
     public static void testGenerateur(Supplier<Integer> supplier) {
@@ -33,12 +33,12 @@ public class Principale {
     }
 
     public static void testConsummerFraction () {
-        Consumer<Fraction> consummer = (x) -> x.numerateur = x.numerateur * 2;
+        Consumer<Fraction> multiplierPar2 = (x) -> x.numerateur = x.numerateur * 2;
         ArrayList<Fraction> fractions = new ArrayList<>();
         fractions.add( new Fraction( 1.0 ,2.0  ) );
         fractions.add( new Fraction( 3.0 ,4.0 ) );
         fractions.add( new Fraction( 10.0 ,3.0 ) );
-        fractions.forEach(consummer);
+        fractions.forEach(multiplierPar2);
         System.out.println(fractions);
     }
 
