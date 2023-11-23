@@ -3,7 +3,7 @@ package Fouilles;
 public class AlgoFouille {
     public static < E extends Comparable< E > > int fouilleBinaire( E [] tableau, E element ){
         int i = 0;
-        int j = tableau.length;
+        int j = tableau.length-1;
         while( i < j ) {
             int m = (i + j)/2;
             if ( element.compareTo(tableau[m]) <= 0){
